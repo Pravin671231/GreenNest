@@ -1,0 +1,16 @@
+{
+  "slug": "monstera-deliciosa",
+  "name": "Monstera Deliciosa",
+  "category": "indoor",
+  "price": 450,
+  "light": "Medium",
+  "water": "Medium",
+  "size": "Medium",
+  "soil": "Well-draining potting mix with perlite for aeration",
+  "difficulty": "Easy",
+  "images": [
+    "/images/plants/monstera-deliciosa-1.jpg",
+    "/images/plants/monstera-deliciosa-2.jpg"
+  ],
+  "relatedSlugs": []
+}
