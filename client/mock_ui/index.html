@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GreenNest — Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { 50:'#EAF3EC',100:'#CFE4D3',300:'#8FBF9A',500:'#4A8C56',600:'#2F6B3A',700:'#24512C' },
+          accent: { 50:'#FBEEE6',100:'#F5D6C2',300:'#E3A57C',500:'#D97742',600:'#C6602E',700:'#A44E24' },
+          neutral: { 50:'#FAFAF9',100:'#F5F5F4',300:'#D6D3D1',600:'#78716C',900:'#292524' },
+        },
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<style>body{font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;}</style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-bold text-primary-700">🌿 GreenNest</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="text-primary-700">Home</a>
+      <a href="catalog.html" class="hover:text-primary-600">Catalog</a>
+      <a href="about.html" class="hover:text-primary-600">About</a>
+      <a href="blog.html" class="hover:text-primary-600">Blog</a>
+      <a href="visit-us.html" class="hover:text-primary-600">Visit Us</a>
+      <a href="contact.html" class="hover:text-primary-600">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+910000000000" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="phone" class="w-4 h-4"></i>Call</a>
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+    </div>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-600 text-white"><i data-feather="message-circle" class="w-5 h-5"></i></a>
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Open menu"><i data-feather="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 z-[60] bg-white">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between border-b border-neutral-300">
+    <span class="text-xl font-bold text-primary-700">🌿 GreenNest</span>
+    <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Close menu"><i data-feather="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="px-4 py-6 flex flex-col gap-3">
+    <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 text-white font-semibold px-4 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call Us</a>
+    <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 text-white font-semibold px-4 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp Us</a>
+    <nav class="flex flex-col gap-1 text-lg font-medium mt-4">
+      <a href="index.html" class="py-3 border-b border-neutral-100 text-primary-700">Home</a>
+      <a href="catalog.html" class="py-3 border-b border-neutral-100">Catalog</a>
+      <a href="about.html" class="py-3 border-b border-neutral-100">About</a>
+      <a href="blog.html" class="py-3 border-b border-neutral-100">Blog</a>
+      <a href="visit-us.html" class="py-3 border-b border-neutral-100">Visit Us</a>
+      <a href="contact.html" class="py-3">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="relative">
+    <div class="h-[520px] md:h-[600px] w-full overflow-hidden">
+      <img src="https://picsum.photos/seed/greennest-hero/1600/900" alt="Nursery greenhouse full of plants" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-neutral-900/40"></div>
+    </div>
+    <div class="absolute inset-0 flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-xl text-white">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">Fresh plants, real roots, right in your neighborhood.</h1>
+          <p class="mt-4 text-lg leading-relaxed text-neutral-100">Healthy, hand-picked plants and honest care advice from a nursery that's been growing green spaces since day one.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white font-semibold px-6 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call</a>
+            <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+            <a href="visit-us.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-white/90 hover:bg-white text-neutral-900 font-semibold px-6 py-3"><i data-feather="navigation" class="w-4 h-4"></i>Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value proposition -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <div class="w-12 h-12 rounded-full bg-primary-50 text-primary-700 flex items-center justify-center"><i data-feather="feather"></i></div>
+        <h3 class="text-xl font-semibold">Fresh, healthy stock</h3>
+        <p class="text-neutral-600 text-sm leading-relaxed">Every plant is grown and inspected on-site before it reaches you.</p>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <div class="w-12 h-12 rounded-full bg-primary-50 text-primary-700 flex items-center justify-center"><i data-feather="users"></i></div>
+        <h3 class="text-xl font-semibold">Expert care advice</h3>
+        <p class="text-neutral-600 text-sm leading-relaxed">Talk to real growers — not a script — about what your space needs.</p>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <div class="w-12 h-12 rounded-full bg-primary-50 text-primary-700 flex items-center justify-center"><i data-feather="map-pin"></i></div>
+        <h3 class="text-xl font-semibold">Proudly local</h3>
+        <p class="text-neutral-600 text-sm leading-relaxed">A physical nursery you can visit, browse, and ask questions in person.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured plants -->
+  <section class="bg-neutral-100 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold">Featured This Season</h2>
+        <a href="catalog.html" class="hidden sm:inline-flex items-center gap-1 text-primary-700 font-semibold hover:text-primary-600">View full catalog <i data-feather="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="plant-detail.html" class="group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow">
+          <img src="https://picsum.photos/seed/monstera-1/400/400" alt="Monstera Deliciosa" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <span class="inline-block text-xs font-medium text-primary-700 bg-primary-50 rounded-full px-2 py-0.5 mb-2">Indoor</span>
+            <h3 class="font-semibold group-hover:text-primary-700">Monstera Deliciosa</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹450</p>
+          </div>
+        </a>
+        <a href="catalog.html" class="group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow">
+          <img src="https://picsum.photos/seed/snake-plant-1/400/400" alt="Snake Plant" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <span class="inline-block text-xs font-medium text-primary-700 bg-primary-50 rounded-full px-2 py-0.5 mb-2">Indoor</span>
+            <h3 class="font-semibold group-hover:text-primary-700">Snake Plant</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹350</p>
+          </div>
+        </a>
+        <a href="catalog.html" class="group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow">
+          <img src="https://picsum.photos/seed/bougainvillea-1/400/400" alt="Bougainvillea" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <span class="inline-block text-xs font-medium text-accent-700 bg-accent-50 rounded-full px-2 py-0.5 mb-2">Outdoor</span>
+            <h3 class="font-semibold group-hover:text-primary-700">Bougainvillea</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹300</p>
+          </div>
+        </a>
+        <a href="catalog.html" class="group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow">
+          <img src="https://picsum.photos/seed/echeveria-1/400/400" alt="Echeveria" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <span class="inline-block text-xs font-medium text-accent-700 bg-accent-50 rounded-full px-2 py-0.5 mb-2">Succulent</span>
+            <h3 class="font-semibold group-hover:text-primary-700">Echeveria</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹150</p>
+          </div>
+        </a>
+      </div>
+      <a href="catalog.html" class="sm:hidden mt-6 inline-flex items-center gap-1 text-primary-700 font-semibold">View full catalog <i data-feather="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <img src="https://picsum.photos/seed/nursery-storefront/800/600" alt="Nursery storefront" class="rounded-2xl w-full h-72 md:h-96 object-cover order-1 md:order-none" />
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Why Choose GreenNest</h2>
+        <ul class="space-y-4 text-neutral-900">
+          <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-primary-600 mt-0.5 shrink-0"></i><span>Grown on-site, not shipped in from a warehouse.</span></li>
+          <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-primary-600 mt-0.5 shrink-0"></i><span>Honest guidance on light, water, and soil for your home.</span></li>
+          <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-primary-600 mt-0.5 shrink-0"></i><span>A wide range from easy-care succulents to statement indoor plants.</span></li>
+          <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-primary-600 mt-0.5 shrink-0"></i><span>Visit any day of the week — no appointment needed.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-primary-50 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-neutral-300 p-6">
+          <p class="text-neutral-900 leading-relaxed">"My monstera has never looked better. The staff actually remembered what I bought last time and asked how it was doing."</p>
+          <p class="mt-4 font-semibold text-sm">— Ananya R.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-neutral-300 p-6">
+          <p class="text-neutral-900 leading-relaxed">"Best succulent selection in the city, and they'll tell you honestly if a plant isn't right for your light conditions."</p>
+          <p class="mt-4 font-semibold text-sm">— Rohit K.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-neutral-300 p-6">
+          <p class="text-neutral-900 leading-relaxed">"Called ahead on WhatsApp to check stock and they had everything ready when I arrived. Painless."</p>
+          <p class="mt-4 font-semibold text-sm">— Priya S.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-neutral-900 text-neutral-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <div class="text-xl font-bold text-white mb-2">🌿 GreenNest</div>
+      <p class="text-sm text-neutral-300">Your neighborhood plant nursery — fresh stock, expert advice, real roots.</p>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Quick Links</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="catalog.html" class="hover:text-white">Catalog</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+        <li><a href="visit-us.html" class="hover:text-white">Visit Us</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Contact</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i>123 Nursery Lane, City, PIN</li>
+        <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+        <li class="flex items-center gap-2"><i data-feather="message-circle" class="w-4 h-4"></i><a href="https://wa.me/910000000000" class="hover:text-white">WhatsApp Us</a></li>
+        <li class="flex items-center gap-2"><i data-feather="clock" class="w-4 h-4"></i>Mon–Sat 9–6, Sun 10–4</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Follow Us</div>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="facebook" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-neutral-800 py-4 text-center text-xs text-neutral-400">© 2026 GreenNest. All rights reserved.</div>
+</footer>
+
+<script>if (window.feather) { feather.replace(); } else { window.addEventListener('load', () => feather.replace()); }</script>
+</body>
+</html>

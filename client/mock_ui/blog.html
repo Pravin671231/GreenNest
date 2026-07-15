@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GreenNest — Blog</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { 50:'#EAF3EC',100:'#CFE4D3',300:'#8FBF9A',500:'#4A8C56',600:'#2F6B3A',700:'#24512C' },
+          accent: { 50:'#FBEEE6',100:'#F5D6C2',300:'#E3A57C',500:'#D97742',600:'#C6602E',700:'#A44E24' },
+          neutral: { 50:'#FAFAF9',100:'#F5F5F4',300:'#D6D3D1',600:'#78716C',900:'#292524' },
+        },
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<style>body{font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;}</style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-bold text-primary-700">🌿 GreenNest</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-primary-600">Home</a>
+      <a href="catalog.html" class="hover:text-primary-600">Catalog</a>
+      <a href="about.html" class="hover:text-primary-600">About</a>
+      <a href="blog.html" class="text-primary-700">Blog</a>
+      <a href="visit-us.html" class="hover:text-primary-600">Visit Us</a>
+      <a href="contact.html" class="hover:text-primary-600">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+910000000000" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="phone" class="w-4 h-4"></i>Call</a>
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+    </div>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-600 text-white"><i data-feather="message-circle" class="w-5 h-5"></i></a>
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Open menu"><i data-feather="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 z-[60] bg-white">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between border-b border-neutral-300">
+    <span class="text-xl font-bold text-primary-700">🌿 GreenNest</span>
+    <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Close menu"><i data-feather="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="px-4 py-6 flex flex-col gap-3">
+    <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 text-white font-semibold px-4 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call Us</a>
+    <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 text-white font-semibold px-4 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp Us</a>
+    <nav class="flex flex-col gap-1 text-lg font-medium mt-4">
+      <a href="index.html" class="py-3 border-b border-neutral-100">Home</a>
+      <a href="catalog.html" class="py-3 border-b border-neutral-100">Catalog</a>
+      <a href="about.html" class="py-3 border-b border-neutral-100">About</a>
+      <a href="blog.html" class="py-3 border-b border-neutral-100 text-primary-700">Blog</a>
+      <a href="visit-us.html" class="py-3 border-b border-neutral-100">Visit Us</a>
+      <a href="contact.html" class="py-3">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <h1 class="text-3xl md:text-4xl font-bold mb-2">Blog</h1>
+  <p class="text-neutral-600 mb-10">Plant-care articles from the GreenNest team.</p>
+
+  <div class="space-y-8 max-w-3xl">
+    <a href="blog-post.html" class="group flex flex-col sm:flex-row gap-5 rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow p-4">
+      <img src="https://picsum.photos/seed/blog-watering-monstera/400/300" alt="Watering a monstera" class="w-full sm:w-48 h-40 sm:h-32 object-cover rounded-xl shrink-0" />
+      <div>
+        <h2 class="text-xl font-semibold group-hover:text-primary-700">Watering Your Monstera: A Beginner's Guide</h2>
+        <p class="text-neutral-600 text-sm mt-2 leading-relaxed">Overwatering is the most common way to lose a Monstera. Here's how to get the schedule right.</p>
+        <p class="text-xs text-neutral-600 mt-3">2026-07-10</p>
+      </div>
+    </a>
+    <a href="blog-post.html" class="group flex flex-col sm:flex-row gap-5 rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow p-4">
+      <img src="https://picsum.photos/seed/blog-low-light/400/300" alt="Low light plants" class="w-full sm:w-48 h-40 sm:h-32 object-cover rounded-xl shrink-0" />
+      <div>
+        <h2 class="text-xl font-semibold group-hover:text-primary-700">5 Low-Light Plants for Indoor Spaces</h2>
+        <p class="text-neutral-600 text-sm mt-2 leading-relaxed">No sunny windows? These five plants will still thrive in a dim corner of your home.</p>
+        <p class="text-xs text-neutral-600 mt-3">2026-07-02</p>
+      </div>
+    </a>
+    <a href="blog-post.html" class="group flex flex-col sm:flex-row gap-5 rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow p-4">
+      <img src="https://picsum.photos/seed/blog-succulent-care/400/300" alt="Succulent care" class="w-full sm:w-48 h-40 sm:h-32 object-cover rounded-xl shrink-0" />
+      <div>
+        <h2 class="text-xl font-semibold group-hover:text-primary-700">Succulent Care 101: Light, Water, and Soil</h2>
+        <p class="text-neutral-600 text-sm mt-2 leading-relaxed">Succulents are forgiving, but a few basics make the difference between thriving and surviving.</p>
+        <p class="text-xs text-neutral-600 mt-3">2026-06-20</p>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer class="bg-neutral-900 text-neutral-100 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <div class="text-xl font-bold text-white mb-2">🌿 GreenNest</div>
+      <p class="text-sm text-neutral-300">Your neighborhood plant nursery — fresh stock, expert advice, real roots.</p>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Quick Links</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="catalog.html" class="hover:text-white">Catalog</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+        <li><a href="visit-us.html" class="hover:text-white">Visit Us</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Contact</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i>123 Nursery Lane, City, PIN</li>
+        <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+        <li class="flex items-center gap-2"><i data-feather="message-circle" class="w-4 h-4"></i><a href="https://wa.me/910000000000" class="hover:text-white">WhatsApp Us</a></li>
+        <li class="flex items-center gap-2"><i data-feather="clock" class="w-4 h-4"></i>Mon–Sat 9–6, Sun 10–4</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Follow Us</div>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="facebook" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-neutral-800 py-4 text-center text-xs text-neutral-400">© 2026 GreenNest. All rights reserved.</div>
+</footer>
+
+<script>if (window.feather) { feather.replace(); } else { window.addEventListener('load', () => feather.replace()); }</script>
+</body>
+</html>

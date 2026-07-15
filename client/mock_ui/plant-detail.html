@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GreenNest — Monstera Deliciosa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { 50:'#EAF3EC',100:'#CFE4D3',300:'#8FBF9A',500:'#4A8C56',600:'#2F6B3A',700:'#24512C' },
+          accent: { 50:'#FBEEE6',100:'#F5D6C2',300:'#E3A57C',500:'#D97742',600:'#C6602E',700:'#A44E24' },
+          neutral: { 50:'#FAFAF9',100:'#F5F5F4',300:'#D6D3D1',600:'#78716C',900:'#292524' },
+        },
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<style>body{font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;}</style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-bold text-primary-700">🌿 GreenNest</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-primary-600">Home</a>
+      <a href="catalog.html" class="text-primary-700">Catalog</a>
+      <a href="about.html" class="hover:text-primary-600">About</a>
+      <a href="blog.html" class="hover:text-primary-600">Blog</a>
+      <a href="visit-us.html" class="hover:text-primary-600">Visit Us</a>
+      <a href="contact.html" class="hover:text-primary-600">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+910000000000" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="phone" class="w-4 h-4"></i>Call</a>
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+    </div>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-600 text-white"><i data-feather="message-circle" class="w-5 h-5"></i></a>
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Open menu"><i data-feather="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 z-[60] bg-white">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between border-b border-neutral-300">
+    <span class="text-xl font-bold text-primary-700">🌿 GreenNest</span>
+    <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Close menu"><i data-feather="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="px-4 py-6 flex flex-col gap-3">
+    <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 text-white font-semibold px-4 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call Us</a>
+    <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 text-white font-semibold px-4 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp Us</a>
+    <nav class="flex flex-col gap-1 text-lg font-medium mt-4">
+      <a href="index.html" class="py-3 border-b border-neutral-100">Home</a>
+      <a href="catalog.html" class="py-3 border-b border-neutral-100 text-primary-700">Catalog</a>
+      <a href="about.html" class="py-3 border-b border-neutral-100">About</a>
+      <a href="blog.html" class="py-3 border-b border-neutral-100">Blog</a>
+      <a href="visit-us.html" class="py-3 border-b border-neutral-100">Visit Us</a>
+      <a href="contact.html" class="py-3">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <nav class="text-sm text-neutral-600 mb-6 hidden md:block">
+    <a href="catalog.html" class="hover:text-primary-700">Catalog</a> / <a href="catalog.html" class="hover:text-primary-700">Indoor</a> / <span class="text-neutral-900">Monstera Deliciosa</span>
+  </nav>
+  <a href="catalog.html" class="md:hidden inline-flex items-center gap-1 text-sm text-neutral-600 mb-6"><i data-feather="chevron-left" class="w-4 h-4"></i>Back to Catalog</a>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <!-- Photo gallery -->
+    <div>
+      <img id="mainImage" src="https://picsum.photos/seed/monstera-1/800/800" alt="Monstera Deliciosa" class="w-full h-80 md:h-96 object-cover rounded-2xl" />
+      <div class="flex gap-3 mt-3">
+        <button onclick="document.getElementById('mainImage').src='https://picsum.photos/seed/monstera-1/800/800'" class="w-16 h-16 rounded-lg overflow-hidden border-2 border-primary-600"><img src="https://picsum.photos/seed/monstera-1/200/200" alt="thumbnail 1" class="w-full h-full object-cover" /></button>
+        <button onclick="document.getElementById('mainImage').src='https://picsum.photos/seed/monstera-2/800/800'" class="w-16 h-16 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary-300"><img src="https://picsum.photos/seed/monstera-2/200/200" alt="thumbnail 2" class="w-full h-full object-cover" /></button>
+        <button onclick="document.getElementById('mainImage').src='https://picsum.photos/seed/monstera-3/800/800'" class="w-16 h-16 rounded-lg overflow-hidden border-2 border-transparent hover:border-primary-300"><img src="https://picsum.photos/seed/monstera-3/200/200" alt="thumbnail 3" class="w-full h-full object-cover" /></button>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold">Monstera Deliciosa</h1>
+      <div class="flex items-center gap-2 mt-3">
+        <span class="text-2xl font-semibold">₹450</span>
+        <span class="inline-flex items-center gap-1 text-xs font-medium text-neutral-600 bg-neutral-100 rounded-full px-2 py-1"><i data-feather="info" class="w-3 h-3"></i>Informational only — visit or call to purchase</span>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mt-6 text-sm">
+        <div class="flex flex-col items-center gap-1 text-center">
+          <i data-feather="sun" class="w-5 h-5 text-primary-600"></i>
+          <span class="font-medium">Light</span>
+          <span class="text-neutral-600">Medium</span>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-center">
+          <i data-feather="droplet" class="w-5 h-5 text-primary-600"></i>
+          <span class="font-medium">Water</span>
+          <span class="text-neutral-600">Weekly</span>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-center">
+          <i data-feather="maximize-2" class="w-5 h-5 text-primary-600"></i>
+          <span class="font-medium">Size</span>
+          <span class="text-neutral-600">Medium</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 mt-8">
+        <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white font-semibold px-6 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call — ask about this plant</a>
+        <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Care instructions -->
+  <section class="mt-16">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Care Instructions</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="rounded-2xl bg-white border border-neutral-300 p-5">
+        <i data-feather="sun" class="w-5 h-5 text-primary-600 mb-2"></i>
+        <h3 class="font-semibold text-sm">Light</h3>
+        <p class="text-sm text-neutral-600 mt-1">Bright, indirect light. Avoid direct afternoon sun which can scorch the leaves.</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-neutral-300 p-5">
+        <i data-feather="droplet" class="w-5 h-5 text-primary-600 mb-2"></i>
+        <h3 class="font-semibold text-sm">Water</h3>
+        <p class="text-sm text-neutral-600 mt-1">Water when the top two inches of soil are dry — roughly once a week.</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-neutral-300 p-5">
+        <i data-feather="layers" class="w-5 h-5 text-primary-600 mb-2"></i>
+        <h3 class="font-semibold text-sm">Soil</h3>
+        <p class="text-sm text-neutral-600 mt-1">Well-draining potting mix with perlite for aeration.</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-neutral-300 p-5">
+        <i data-feather="activity" class="w-5 h-5 text-primary-600 mb-2"></i>
+        <h3 class="font-semibold text-sm">Difficulty</h3>
+        <p class="text-sm text-neutral-600 mt-1">Easy — forgiving and a great choice for beginners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related plants -->
+  <section class="mt-16">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Related Plants</h2>
+    <div class="flex md:grid md:grid-cols-4 gap-6 overflow-x-auto pb-2">
+      <a href="plant-detail.html" class="group shrink-0 w-40 md:w-auto rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow">
+        <img src="https://picsum.photos/seed/snake-plant-1/400/400" alt="Snake Plant" class="w-full h-32 object-cover" />
+        <div class="p-3">
+          <h3 class="font-semibold text-sm group-hover:text-primary-700">Snake Plant</h3>
+          <p class="text-xs text-neutral-600 mt-1">₹350</p>
+        </div>
+      </a>
+      <a href="plant-detail.html" class="group shrink-0 w-40 md:w-auto rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow">
+        <img src="https://picsum.photos/seed/areca-palm-1/400/400" alt="Areca Palm" class="w-full h-32 object-cover" />
+        <div class="p-3">
+          <h3 class="font-semibold text-sm group-hover:text-primary-700">Areca Palm</h3>
+          <p class="text-xs text-neutral-600 mt-1">₹650</p>
+        </div>
+      </a>
+      <a href="plant-detail.html" class="group shrink-0 w-40 md:w-auto rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow">
+        <img src="https://picsum.photos/seed/bougainvillea-1/400/400" alt="Bougainvillea" class="w-full h-32 object-cover" />
+        <div class="p-3">
+          <h3 class="font-semibold text-sm group-hover:text-primary-700">Bougainvillea</h3>
+          <p class="text-xs text-neutral-600 mt-1">₹300</p>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-neutral-900 text-neutral-100 mt-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <div class="text-xl font-bold text-white mb-2">🌿 GreenNest</div>
+      <p class="text-sm text-neutral-300">Your neighborhood plant nursery — fresh stock, expert advice, real roots.</p>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Quick Links</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="catalog.html" class="hover:text-white">Catalog</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+        <li><a href="visit-us.html" class="hover:text-white">Visit Us</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Contact</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i>123 Nursery Lane, City, PIN</li>
+        <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+        <li class="flex items-center gap-2"><i data-feather="message-circle" class="w-4 h-4"></i><a href="https://wa.me/910000000000" class="hover:text-white">WhatsApp Us</a></li>
+        <li class="flex items-center gap-2"><i data-feather="clock" class="w-4 h-4"></i>Mon–Sat 9–6, Sun 10–4</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Follow Us</div>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="facebook" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-neutral-800 py-4 text-center text-xs text-neutral-400">© 2026 GreenNest. All rights reserved.</div>
+</footer>
+
+<script>if (window.feather) { feather.replace(); } else { window.addEventListener('load', () => feather.replace()); }</script>
+</body>
+</html>

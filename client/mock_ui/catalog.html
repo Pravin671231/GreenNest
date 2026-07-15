@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GreenNest — Catalog</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { 50:'#EAF3EC',100:'#CFE4D3',300:'#8FBF9A',500:'#4A8C56',600:'#2F6B3A',700:'#24512C' },
+          accent: { 50:'#FBEEE6',100:'#F5D6C2',300:'#E3A57C',500:'#D97742',600:'#C6602E',700:'#A44E24' },
+          neutral: { 50:'#FAFAF9',100:'#F5F5F4',300:'#D6D3D1',600:'#78716C',900:'#292524' },
+        },
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<style>body{font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;}</style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-bold text-primary-700">🌿 GreenNest</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-primary-600">Home</a>
+      <a href="catalog.html" class="text-primary-700">Catalog</a>
+      <a href="about.html" class="hover:text-primary-600">About</a>
+      <a href="blog.html" class="hover:text-primary-600">Blog</a>
+      <a href="visit-us.html" class="hover:text-primary-600">Visit Us</a>
+      <a href="contact.html" class="hover:text-primary-600">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+910000000000" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="phone" class="w-4 h-4"></i>Call</a>
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+    </div>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-600 text-white"><i data-feather="message-circle" class="w-5 h-5"></i></a>
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Open menu"><i data-feather="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 z-[60] bg-white">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between border-b border-neutral-300">
+    <span class="text-xl font-bold text-primary-700">🌿 GreenNest</span>
+    <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Close menu"><i data-feather="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="px-4 py-6 flex flex-col gap-3">
+    <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 text-white font-semibold px-4 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call Us</a>
+    <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 text-white font-semibold px-4 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp Us</a>
+    <nav class="flex flex-col gap-1 text-lg font-medium mt-4">
+      <a href="index.html" class="py-3 border-b border-neutral-100">Home</a>
+      <a href="catalog.html" class="py-3 border-b border-neutral-100 text-primary-700">Catalog</a>
+      <a href="about.html" class="py-3 border-b border-neutral-100">About</a>
+      <a href="blog.html" class="py-3 border-b border-neutral-100">Blog</a>
+      <a href="visit-us.html" class="py-3 border-b border-neutral-100">Visit Us</a>
+      <a href="contact.html" class="py-3">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <h1 class="text-3xl md:text-4xl font-bold mb-6">Catalog</h1>
+
+  <!-- Desktop filter bar -->
+  <div class="hidden md:flex items-center gap-3 mb-10 flex-wrap">
+    <select id="f-category" onchange="applyFilters()" class="rounded-full border border-neutral-300 bg-white text-sm px-4 py-2">
+      <option value="all">Category: All</option>
+      <option value="indoor">Indoor</option>
+      <option value="outdoor">Outdoor</option>
+      <option value="succulent">Succulents</option>
+      <option value="flowering">Flowering</option>
+    </select>
+    <select id="f-light" onchange="applyFilters()" class="rounded-full border border-neutral-300 bg-white text-sm px-4 py-2">
+      <option value="all">Light: All</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <select id="f-water" onchange="applyFilters()" class="rounded-full border border-neutral-300 bg-white text-sm px-4 py-2">
+      <option value="all">Water: All</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <select id="f-size" onchange="applyFilters()" class="rounded-full border border-neutral-300 bg-white text-sm px-4 py-2">
+      <option value="all">Size: All</option>
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+    </select>
+    <button onclick="clearFilters()" class="text-sm font-semibold text-neutral-600 hover:text-neutral-900 px-2">Clear</button>
+  </div>
+
+  <!-- Mobile filter trigger -->
+  <div class="md:hidden mb-8">
+    <button onclick="openMobileFilters()" class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold">
+      <i data-feather="sliders" class="w-4 h-4"></i>
+      <span id="mobileFilterLabel">Filters (0)</span>
+    </button>
+  </div>
+
+  <div id="categorySections">
+    <section class="category-section mb-12" data-category="indoor">
+      <h2 class="text-2xl font-semibold mb-4">Indoor</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 category-grid">
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="indoor" data-light="Medium" data-water="Medium" data-size="Medium">
+          <img src="https://picsum.photos/seed/monstera-1/400/400" alt="Monstera Deliciosa" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Monstera Deliciosa</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹450 · Medium light · Medium water</p>
+          </div>
+        </a>
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="indoor" data-light="Low" data-water="Low" data-size="Small">
+          <img src="https://picsum.photos/seed/snake-plant-1/400/400" alt="Snake Plant" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Snake Plant</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹350 · Low light · Low water</p>
+          </div>
+        </a>
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="indoor" data-light="Medium" data-water="Medium" data-size="Large">
+          <img src="https://picsum.photos/seed/areca-palm-1/400/400" alt="Areca Palm" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Areca Palm</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹650 · Medium light · Medium water</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="category-section mb-12" data-category="outdoor">
+      <h2 class="text-2xl font-semibold mb-4">Outdoor</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 category-grid">
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="outdoor" data-light="High" data-water="Low" data-size="Medium">
+          <img src="https://picsum.photos/seed/bougainvillea-1/400/400" alt="Bougainvillea" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Bougainvillea</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹300 · High light · Low water</p>
+          </div>
+        </a>
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="outdoor" data-light="High" data-water="Medium" data-size="Medium">
+          <img src="https://picsum.photos/seed/hibiscus-1/400/400" alt="Hibiscus" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Hibiscus</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹280 · High light · Medium water</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="category-section mb-12" data-category="succulent">
+      <h2 class="text-2xl font-semibold mb-4">Succulents</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 category-grid">
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="succulent" data-light="High" data-water="Low" data-size="Small">
+          <img src="https://picsum.photos/seed/echeveria-1/400/400" alt="Echeveria" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Echeveria</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹150 · High light · Low water</p>
+          </div>
+        </a>
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="succulent" data-light="Medium" data-water="Low" data-size="Small">
+          <img src="https://picsum.photos/seed/haworthia-1/400/400" alt="Haworthia" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Haworthia</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹120 · Medium light · Low water</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="category-section mb-12" data-category="flowering">
+      <h2 class="text-2xl font-semibold mb-4">Flowering</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 category-grid">
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="flowering" data-light="High" data-water="Medium" data-size="Medium">
+          <img src="https://picsum.photos/seed/rose-1/400/400" alt="Desi Gulab Rose" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Desi Gulab (Rose)</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹220 · High light · Medium water</p>
+          </div>
+        </a>
+        <a href="plant-detail.html" class="plant-card group rounded-2xl bg-white border border-neutral-300 overflow-hidden hover:shadow-md transition-shadow" data-category="flowering" data-light="High" data-water="Medium" data-size="Small">
+          <img src="https://picsum.photos/seed/marigold-1/400/400" alt="Marigold" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold group-hover:text-primary-700">Marigold</h3>
+            <p class="text-sm text-neutral-600 mt-1">₹90 · High light · Medium water</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Empty state -->
+  <div id="emptyState" class="hidden flex-col items-center text-center py-20">
+    <i data-feather="search" class="w-10 h-10 text-neutral-300 mb-4"></i>
+    <p class="text-lg font-semibold">No plants match your filters</p>
+    <p class="text-neutral-600 mt-1">Try removing a filter, or</p>
+    <button onclick="clearFilters()" class="mt-4 inline-flex items-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-semibold px-5 py-2">Clear all filters</button>
+  </div>
+</main>
+
+<!-- Mobile filter dialog -->
+<div id="filterDialog" class="hidden fixed inset-0 z-[70] bg-white flex flex-col">
+  <div class="flex items-center justify-between px-4 h-16 border-b border-neutral-300">
+    <h2 class="text-lg font-semibold">Filters</h2>
+    <button onclick="closeMobileFilters()" class="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center" aria-label="Close"><i data-feather="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="flex-1 overflow-y-auto px-4 py-6 space-y-8">
+    <div>
+      <h3 class="font-semibold mb-3">Category</h3>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <label class="flex items-center gap-2"><input type="radio" name="m-category" value="all" checked onchange="previewCount()" /> All</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-category" value="indoor" onchange="previewCount()" /> Indoor</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-category" value="outdoor" onchange="previewCount()" /> Outdoor</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-category" value="succulent" onchange="previewCount()" /> Succulents</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-category" value="flowering" onchange="previewCount()" /> Flowering</label>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-3">Light needs</h3>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <label class="flex items-center gap-2"><input type="radio" name="m-light" value="all" checked onchange="previewCount()" /> All</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-light" value="Low" onchange="previewCount()" /> Low</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-light" value="Medium" onchange="previewCount()" /> Medium</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-light" value="High" onchange="previewCount()" /> High</label>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-3">Water needs</h3>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <label class="flex items-center gap-2"><input type="radio" name="m-water" value="all" checked onchange="previewCount()" /> All</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-water" value="Low" onchange="previewCount()" /> Low</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-water" value="Medium" onchange="previewCount()" /> Medium</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-water" value="High" onchange="previewCount()" /> High</label>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-3">Size</h3>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <label class="flex items-center gap-2"><input type="radio" name="m-size" value="all" checked onchange="previewCount()" /> All</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-size" value="Small" onchange="previewCount()" /> Small</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-size" value="Medium" onchange="previewCount()" /> Medium</label>
+        <label class="flex items-center gap-2"><input type="radio" name="m-size" value="Large" onchange="previewCount()" /> Large</label>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center gap-3 px-4 py-4 border-t border-neutral-300">
+    <button onclick="clearMobileFilters()" class="flex-1 rounded-full border border-neutral-300 font-semibold py-3">Clear</button>
+    <button onclick="applyMobileFilters()" id="applyBtn" class="flex-1 rounded-full bg-primary-600 text-white font-semibold py-3">Apply (9)</button>
+  </div>
+</div>
+
+<footer class="bg-neutral-900 text-neutral-100 mt-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <div class="text-xl font-bold text-white mb-2">🌿 GreenNest</div>
+      <p class="text-sm text-neutral-300">Your neighborhood plant nursery — fresh stock, expert advice, real roots.</p>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Quick Links</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="catalog.html" class="hover:text-white">Catalog</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+        <li><a href="visit-us.html" class="hover:text-white">Visit Us</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Contact</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i>123 Nursery Lane, City, PIN</li>
+        <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+        <li class="flex items-center gap-2"><i data-feather="message-circle" class="w-4 h-4"></i><a href="https://wa.me/910000000000" class="hover:text-white">WhatsApp Us</a></li>
+        <li class="flex items-center gap-2"><i data-feather="clock" class="w-4 h-4"></i>Mon–Sat 9–6, Sun 10–4</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Follow Us</div>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="facebook" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-neutral-800 py-4 text-center text-xs text-neutral-400">© 2026 GreenNest. All rights reserved.</div>
+</footer>
+
+<script>
+function getSelectValues() {
+  return {
+    category: document.getElementById('f-category').value,
+    light: document.getElementById('f-light').value,
+    water: document.getElementById('f-water').value,
+    size: document.getElementById('f-size').value,
+  };
+}
+
+function matches(card, f) {
+  return (f.category === 'all' || card.dataset.category === f.category)
+    && (f.light === 'all' || card.dataset.light === f.light)
+    && (f.water === 'all' || card.dataset.water === f.water)
+    && (f.size === 'all' || card.dataset.size === f.size);
+}
+
+function applyFilters() {
+  const f = getSelectValues();
+  let visibleTotal = 0;
+  document.querySelectorAll('.category-section').forEach(section => {
+    let visibleInSection = 0;
+    section.querySelectorAll('.plant-card').forEach(card => {
+      const show = matches(card, f);
+      card.classList.toggle('hidden', !show);
+      if (show) { visibleInSection++; visibleTotal++; }
+    });
+    section.classList.toggle('hidden', visibleInSection === 0);
+  });
+  document.getElementById('emptyState').classList.toggle('hidden', visibleTotal !== 0);
+  document.getElementById('emptyState').classList.toggle('flex', visibleTotal === 0);
+
+  const activeCount = Object.values(f).filter(v => v !== 'all').length;
+  document.getElementById('mobileFilterLabel').textContent = 'Filters (' + activeCount + ')';
+}
+
+function clearFilters() {
+  document.getElementById('f-category').value = 'all';
+  document.getElementById('f-light').value = 'all';
+  document.getElementById('f-water').value = 'all';
+  document.getElementById('f-size').value = 'all';
+  applyFilters();
+}
+
+function openMobileFilters() {
+  const f = getSelectValues();
+  document.querySelector('input[name="m-category"][value="' + f.category + '"]').checked = true;
+  document.querySelector('input[name="m-light"][value="' + f.light + '"]').checked = true;
+  document.querySelector('input[name="m-water"][value="' + f.water + '"]').checked = true;
+  document.querySelector('input[name="m-size"][value="' + f.size + '"]').checked = true;
+  previewCount();
+  document.getElementById('filterDialog').classList.remove('hidden');
+}
+
+function closeMobileFilters() {
+  document.getElementById('filterDialog').classList.add('hidden');
+}
+
+function getRadioValues() {
+  return {
+    category: document.querySelector('input[name="m-category"]:checked').value,
+    light: document.querySelector('input[name="m-light"]:checked').value,
+    water: document.querySelector('input[name="m-water"]:checked').value,
+    size: document.querySelector('input[name="m-size"]:checked').value,
+  };
+}
+
+function previewCount() {
+  const f = getRadioValues();
+  let count = 0;
+  document.querySelectorAll('.plant-card').forEach(card => { if (matches(card, f)) count++; });
+  document.getElementById('applyBtn').textContent = 'Apply (' + count + ')';
+}
+
+function applyMobileFilters() {
+  const f = getRadioValues();
+  document.getElementById('f-category').value = f.category;
+  document.getElementById('f-light').value = f.light;
+  document.getElementById('f-water').value = f.water;
+  document.getElementById('f-size').value = f.size;
+  applyFilters();
+  closeMobileFilters();
+}
+
+function clearMobileFilters() {
+  document.querySelector('input[name="m-category"][value="all"]').checked = true;
+  document.querySelector('input[name="m-light"][value="all"]').checked = true;
+  document.querySelector('input[name="m-water"][value="all"]').checked = true;
+  document.querySelector('input[name="m-size"][value="all"]').checked = true;
+  previewCount();
+}
+
+if (window.feather) { feather.replace(); } else { window.addEventListener('load', () => feather.replace()); }
+</script>
+</body>
+</html>

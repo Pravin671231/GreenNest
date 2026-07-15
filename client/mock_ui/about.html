@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GreenNest — About</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { 50:'#EAF3EC',100:'#CFE4D3',300:'#8FBF9A',500:'#4A8C56',600:'#2F6B3A',700:'#24512C' },
+          accent: { 50:'#FBEEE6',100:'#F5D6C2',300:'#E3A57C',500:'#D97742',600:'#C6602E',700:'#A44E24' },
+          neutral: { 50:'#FAFAF9',100:'#F5F5F4',300:'#D6D3D1',600:'#78716C',900:'#292524' },
+        },
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<style>body{font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;}</style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-bold text-primary-700">🌿 GreenNest</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-primary-600">Home</a>
+      <a href="catalog.html" class="hover:text-primary-600">Catalog</a>
+      <a href="about.html" class="text-primary-700">About</a>
+      <a href="blog.html" class="hover:text-primary-600">Blog</a>
+      <a href="visit-us.html" class="hover:text-primary-600">Visit Us</a>
+      <a href="contact.html" class="hover:text-primary-600">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+910000000000" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="phone" class="w-4 h-4"></i>Call</a>
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+    </div>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-600 text-white"><i data-feather="message-circle" class="w-5 h-5"></i></a>
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Open menu"><i data-feather="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 z-[60] bg-white">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between border-b border-neutral-300">
+    <span class="text-xl font-bold text-primary-700">🌿 GreenNest</span>
+    <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Close menu"><i data-feather="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="px-4 py-6 flex flex-col gap-3">
+    <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 text-white font-semibold px-4 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call Us</a>
+    <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 text-white font-semibold px-4 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp Us</a>
+    <nav class="flex flex-col gap-1 text-lg font-medium mt-4">
+      <a href="index.html" class="py-3 border-b border-neutral-100">Home</a>
+      <a href="catalog.html" class="py-3 border-b border-neutral-100">Catalog</a>
+      <a href="about.html" class="py-3 border-b border-neutral-100 text-primary-700">About</a>
+      <a href="blog.html" class="py-3 border-b border-neutral-100">Blog</a>
+      <a href="visit-us.html" class="py-3 border-b border-neutral-100">Visit Us</a>
+      <a href="contact.html" class="py-3">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <!-- Our story -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-16">
+    <img src="https://picsum.photos/seed/greennest-story/800/600" alt="GreenNest founders in the greenhouse" class="rounded-2xl w-full h-72 md:h-96 object-cover order-1 md:order-none" />
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Our Story</h1>
+      <p class="text-lg leading-relaxed text-neutral-900 mb-4">GreenNest started as a small backyard collection of cuttings and a lot of curiosity. What began as a hobby turned into a full nursery once neighbors kept asking where we got our plants from.</p>
+      <p class="leading-relaxed text-neutral-600">Today we grow the majority of our stock on-site, from easy-care succulents to statement indoor plants, and we still believe the best advice comes from people who've actually kept the plant alive themselves.</p>
+    </div>
+  </section>
+
+  <!-- Nursery photos -->
+  <section class="mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">Nursery Photos</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="https://picsum.photos/seed/nursery-photo-1/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+      <img src="https://picsum.photos/seed/nursery-photo-2/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+      <img src="https://picsum.photos/seed/nursery-photo-3/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+      <img src="https://picsum.photos/seed/nursery-photo-4/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+      <img src="https://picsum.photos/seed/nursery-photo-5/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+      <img src="https://picsum.photos/seed/nursery-photo-6/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+      <img src="https://picsum.photos/seed/nursery-photo-7/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+      <img src="https://picsum.photos/seed/nursery-photo-8/500/500" alt="Nursery photo" class="rounded-xl w-full h-40 md:h-48 object-cover" />
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section>
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">Meet the Team</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex flex-col items-center md:items-start text-center md:text-left gap-3">
+        <img src="https://picsum.photos/seed/team-1/300/300" alt="Founder" class="w-32 h-32 rounded-full object-cover" />
+        <div>
+          <h3 class="font-semibold">Meera Nair</h3>
+          <p class="text-sm text-neutral-600">Founder</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-start text-center md:text-left gap-3">
+        <img src="https://picsum.photos/seed/team-2/300/300" alt="Head Gardener" class="w-32 h-32 rounded-full object-cover" />
+        <div>
+          <h3 class="font-semibold">Arjun Verma</h3>
+          <p class="text-sm text-neutral-600">Head Gardener</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-start text-center md:text-left gap-3">
+        <img src="https://picsum.photos/seed/team-3/300/300" alt="Store Manager" class="w-32 h-32 rounded-full object-cover" />
+        <div>
+          <h3 class="font-semibold">Sana Iqbal</h3>
+          <p class="text-sm text-neutral-600">Store Manager</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-neutral-900 text-neutral-100 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <div class="text-xl font-bold text-white mb-2">🌿 GreenNest</div>
+      <p class="text-sm text-neutral-300">Your neighborhood plant nursery — fresh stock, expert advice, real roots.</p>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Quick Links</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="catalog.html" class="hover:text-white">Catalog</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+        <li><a href="visit-us.html" class="hover:text-white">Visit Us</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Contact</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i>123 Nursery Lane, City, PIN</li>
+        <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+        <li class="flex items-center gap-2"><i data-feather="message-circle" class="w-4 h-4"></i><a href="https://wa.me/910000000000" class="hover:text-white">WhatsApp Us</a></li>
+        <li class="flex items-center gap-2"><i data-feather="clock" class="w-4 h-4"></i>Mon–Sat 9–6, Sun 10–4</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Follow Us</div>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="facebook" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-neutral-800 py-4 text-center text-xs text-neutral-400">© 2026 GreenNest. All rights reserved.</div>
+</footer>
+
+<script>if (window.feather) { feather.replace(); } else { window.addEventListener('load', () => feather.replace()); }</script>
+</body>
+</html>

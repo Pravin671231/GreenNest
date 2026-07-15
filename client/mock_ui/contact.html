@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GreenNest — Contact</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { 50:'#EAF3EC',100:'#CFE4D3',300:'#8FBF9A',500:'#4A8C56',600:'#2F6B3A',700:'#24512C' },
+          accent: { 50:'#FBEEE6',100:'#F5D6C2',300:'#E3A57C',500:'#D97742',600:'#C6602E',700:'#A44E24' },
+          neutral: { 50:'#FAFAF9',100:'#F5F5F4',300:'#D6D3D1',600:'#78716C',900:'#292524' },
+        },
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<style>body{font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;}</style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-bold text-primary-700">🌿 GreenNest</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-primary-600">Home</a>
+      <a href="catalog.html" class="hover:text-primary-600">Catalog</a>
+      <a href="about.html" class="hover:text-primary-600">About</a>
+      <a href="blog.html" class="hover:text-primary-600">Blog</a>
+      <a href="visit-us.html" class="hover:text-primary-600">Visit Us</a>
+      <a href="contact.html" class="text-primary-700">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+910000000000" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="phone" class="w-4 h-4"></i>Call</a>
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-4 py-2 transition-colors"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+    </div>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-600 text-white"><i data-feather="message-circle" class="w-5 h-5"></i></a>
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Open menu"><i data-feather="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 z-[60] bg-white">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between border-b border-neutral-300">
+    <span class="text-xl font-bold text-primary-700">🌿 GreenNest</span>
+    <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-300" aria-label="Close menu"><i data-feather="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="px-4 py-6 flex flex-col gap-3">
+    <a href="tel:+910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 text-white font-semibold px-4 py-3"><i data-feather="phone" class="w-4 h-4"></i>Call Us</a>
+    <a href="https://wa.me/910000000000" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 text-white font-semibold px-4 py-3"><i data-feather="message-circle" class="w-4 h-4"></i>WhatsApp Us</a>
+    <nav class="flex flex-col gap-1 text-lg font-medium mt-4">
+      <a href="index.html" class="py-3 border-b border-neutral-100">Home</a>
+      <a href="catalog.html" class="py-3 border-b border-neutral-100">Catalog</a>
+      <a href="about.html" class="py-3 border-b border-neutral-100">About</a>
+      <a href="blog.html" class="py-3 border-b border-neutral-100">Blog</a>
+      <a href="visit-us.html" class="py-3 border-b border-neutral-100">Visit Us</a>
+      <a href="contact.html" class="py-3 text-primary-700">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<main class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <h1 class="text-3xl md:text-4xl font-bold mb-8">Contact Us</h1>
+
+  <div class="rounded-2xl bg-primary-50 border border-primary-100 p-6 mb-10">
+    <p class="font-semibold mb-4">Prefer to talk? Reach us directly:</p>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a href="tel:+910000000000" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-white font-semibold px-6 py-4 text-lg"><i data-feather="phone" class="w-5 h-5"></i>Call Us</a>
+      <a href="https://wa.me/910000000000" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-4 text-lg"><i data-feather="message-circle" class="w-5 h-5"></i>WhatsApp Us</a>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-4 mb-8">
+    <div class="flex-1 h-px bg-neutral-300"></div>
+    <span class="text-sm text-neutral-600">or send us a message (optional)</span>
+    <div class="flex-1 h-px bg-neutral-300"></div>
+  </div>
+
+  <form id="contactForm" novalidate class="space-y-5">
+    <div>
+      <label for="name" class="block text-sm font-medium mb-1">Name *</label>
+      <input id="name" name="name" type="text" class="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+      <p class="field-error hidden text-sm text-red-700 mt-1 flex items-center gap-1"><i data-feather="alert-triangle" class="w-3.5 h-3.5"></i><span></span></p>
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-medium mb-1">Email *</label>
+      <input id="email" name="email" type="email" class="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+      <p class="field-error hidden text-sm text-red-700 mt-1 flex items-center gap-1"><i data-feather="alert-triangle" class="w-3.5 h-3.5"></i><span></span></p>
+    </div>
+    <div>
+      <label for="message" class="block text-sm font-medium mb-1">Message *</label>
+      <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+      <p class="field-error hidden text-sm text-red-700 mt-1 flex items-center gap-1"><i data-feather="alert-triangle" class="w-3.5 h-3.5"></i><span></span></p>
+    </div>
+
+    <p id="formFailure" class="hidden text-sm text-red-700 bg-red-50 rounded-xl px-4 py-3 flex items-center gap-2"><i data-feather="alert-triangle" class="w-4 h-4 shrink-0"></i>Something went wrong sending your message — please try Call or WhatsApp above, or try again.</p>
+
+    <button type="submit" id="submitBtn" class="w-full rounded-full bg-neutral-900 hover:bg-neutral-800 text-white font-semibold px-6 py-3">Send Message</button>
+  </form>
+
+  <div id="formSuccess" class="hidden rounded-2xl bg-primary-50 border border-primary-100 p-6 text-center">
+    <i data-feather="check-circle" class="w-8 h-8 text-primary-600 mx-auto mb-2"></i>
+    <p class="font-semibold">Thanks! We'll get back to you soon.</p>
+  </div>
+</main>
+
+<footer class="bg-neutral-900 text-neutral-100 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <div class="text-xl font-bold text-white mb-2">🌿 GreenNest</div>
+      <p class="text-sm text-neutral-300">Your neighborhood plant nursery — fresh stock, expert advice, real roots.</p>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Quick Links</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="catalog.html" class="hover:text-white">Catalog</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+        <li><a href="visit-us.html" class="hover:text-white">Visit Us</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Contact</div>
+      <ul class="space-y-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i>123 Nursery Lane, City, PIN</li>
+        <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+        <li class="flex items-center gap-2"><i data-feather="message-circle" class="w-4 h-4"></i><a href="https://wa.me/910000000000" class="hover:text-white">WhatsApp Us</a></li>
+        <li class="flex items-center gap-2"><i data-feather="clock" class="w-4 h-4"></i>Mon–Sat 9–6, Sun 10–4</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-3">Follow Us</div>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600"><i data-feather="facebook" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-neutral-800 py-4 text-center text-xs text-neutral-400">© 2026 GreenNest. All rights reserved.</div>
+</footer>
+
+<script>
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function setFieldError(input, message) {
+  const errorEl = input.closest('div').querySelector('.field-error');
+  if (message) {
+    errorEl.querySelector('span').textContent = message;
+    errorEl.classList.remove('hidden');
+    input.classList.add('border-red-700');
+  } else {
+    errorEl.classList.add('hidden');
+    input.classList.remove('border-red-700');
+  }
+}
+
+function validateForm() {
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+  let valid = true;
+
+  if (!name.value.trim()) { setFieldError(name, 'This field is required'); valid = false; } else { setFieldError(name, null); }
+  if (!email.value.trim()) { setFieldError(email, 'This field is required'); valid = false; }
+  else if (!EMAIL_RE.test(email.value.trim())) { setFieldError(email, 'Please enter a valid email address'); valid = false; }
+  else { setFieldError(email, null); }
+  if (!message.value.trim()) { setFieldError(message, 'This field is required'); valid = false; } else { setFieldError(message, null); }
+
+  return valid;
+}
+
+['name', 'email', 'message'].forEach(id => {
+  document.getElementById(id).addEventListener('blur', validateForm);
+});
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('formFailure').classList.add('hidden');
+  if (!validateForm()) return;
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  btn.classList.add('opacity-70');
+
+  setTimeout(() => {
+    document.getElementById('contactForm').classList.add('hidden');
+    document.getElementById('formSuccess').classList.remove('hidden');
+  }, 900);
+});
+
+if (window.feather) { feather.replace(); } else { window.addEventListener('load', () => feather.replace()); }
+</script>
+</body>
+</html>
