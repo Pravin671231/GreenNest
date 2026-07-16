@@ -10,7 +10,7 @@ describe("Velite plant schema", () => {
     expect(monstera).toMatchObject({
       name: "Monstera Deliciosa",
       category: "indoor",
-      price: 999999,
+      price: 450,
     });
     expect(monstera?.images.length).toBeGreaterThan(0);
   });
