@@ -10,6 +10,6 @@ export default async function config(): Promise<NextConfig> {
   }
 
   return {
-    /* config options here */
+    output: "standalone",
   };
 }

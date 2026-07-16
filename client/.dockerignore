@@ -1,0 +1,10 @@
+node_modules
+.next
+.velite
+.git
+playwright-report
+test-results
+tests
+docs
+*.md
+.env*
