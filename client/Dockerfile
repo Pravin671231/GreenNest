@@ -9,7 +9,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN npm run build-this-script-does-not-exist
 
 # Final stage: only the standalone server output, no dev dependencies.
 FROM node:20-alpine AS runner
