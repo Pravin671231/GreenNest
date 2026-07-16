@@ -29,6 +29,23 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Docker
+
+Build and run the production image locally (see `Dockerfile`):
+
+```bash
+docker build -t greennest-client .
+docker run --rm -p 3000:3000 greennest-client
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the result.
+
+To serve on a different port, set the `PORT` env var (the container listens on whatever `PORT` is set to, so map that same port with `-p`):
+
+```bash
+docker run --rm -p 8080:8080 -e PORT=8080 greennest-client
+```
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
