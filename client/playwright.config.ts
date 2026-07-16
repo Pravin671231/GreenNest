@@ -14,8 +14,11 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   // Smoke tests run against the production build, not `next dev` (SRS §6).
+  // CI builds explicitly as its own workflow step (#19), so only start there.
   webServer: {
-    command: "npm run build && npm run start",
+    command: process.env.CI
+      ? "npm run start"
+      : "npm run build && npm run start",
     url: baseURL,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
